@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :posts
+
   validates :user_name,
             length: { in: 4..12 },
             presence: true,
